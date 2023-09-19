@@ -1,1 +1,1 @@
-# Базовая сборка webpack для react
+# shop

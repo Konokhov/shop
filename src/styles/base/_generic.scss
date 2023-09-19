@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+
+  font-size: $font-size-base;
+  font-family: $font-family;
+  color: $color-text;
+  background-color: $gallery;
+}
+
+#root {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+img:not([class]) {
+  max-width: 100%;
+}

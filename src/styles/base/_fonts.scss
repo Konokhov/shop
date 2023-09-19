@@ -1,0 +1,28 @@
+@import "../abstracts/variables";
+
+@font-face {
+  $font-name: "Roboto-Regular";
+  font-family: $font-family-custom;
+  font-weight: 400;
+  font-style: normal;
+  src: url("#{$font-path}/#{$font-name}.woff") format("woff"),
+       url("#{$font-path}/#{$font-name}.woff2") format("woff2");
+}
+
+@font-face {
+  $font-name: "Roboto-Medium";
+  font-family: $font-family-custom;
+  font-weight: 500;
+  font-style: normal;
+  src: url("#{$font-path}/#{$font-name}.woff") format("woff"),
+       url("#{$font-path}/#{$font-name}.woff2") format("woff2");
+}
+
+@font-face {
+  $font-name: "Roboto-Bold";
+  font-family: $font-family-custom;
+  font-weight: 700;
+  font-style: normal;
+  src: url("#{$font-path}/#{$font-name}.woff") format("woff"),
+       url("#{$font-path}/#{$font-name}.woff2") format("woff2");
+}
