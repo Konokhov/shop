@@ -15,7 +15,7 @@ function getCssRules(withModules) {
       loader: "css-loader",
       options: {
         modules: {
-          localIdentName: '[name]__[local]___[hash:base64:5]'
+          localIdentName: isDev ? '[folder]__[local]--[hash:base64:5]' : '[hash:base64:5]'
         }
       }
     } : "css-loader",
@@ -58,12 +58,12 @@ module.exports = {
         use: [{loader: "babel-loader"}],
       },
       {
-        test: /\.modules\.s?css$/,
+        test: /\.module\.s?css$/,
         use: getCssRules(true)
       },
       {
         test: /\.s?css$/,
-        exclude: /\.modules\.s?css$/,
+        exclude: /\.module\.s?css$/,
         use: getCssRules(false)
       },
       {
