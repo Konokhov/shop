@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import styles from "./Navbar.module.scss";
+import { Link } from "react-router-dom";
 
 type NavbarProps = {
   isToggle: boolean;
@@ -10,14 +11,14 @@ function Navbar({ isToggle }: NavbarProps) {
     <nav className={`${styles.navbar} ${isToggle ? styles.open : ""}`}>
       <ul className={`${styles.list} ${isToggle ? styles.open : ""}`}>
         <li className={styles.item}>
-          <a className={styles.link} href="#">
+          <Link to={"/"} className={styles.link}>
             Главная
-          </a>
+          </Link>
         </li>
         <li className={styles.item}>
-          <a className={styles.link} href="#">
+          <Link to={"products"} className={styles.link}>
             Товары
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
