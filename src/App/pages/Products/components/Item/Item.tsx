@@ -1,31 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Item.module.scss";
+import { Product } from "types/Product";
 
-function Item() {
+type ItemProps = {
+  elem: Product;
+};
+
+function Item({ elem }: ItemProps) {
   return (
-    <article className={styles.card}>
-      <div className={styles.imageBox}>
-        <img
-          className={styles.image}
-          src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-          alt=""
-        />
-      </div>
-      <div className={styles.body}>
-        <h1 className={styles.price}>100 ₽</h1>
-        <h1 className={styles.title}>Mens Cotton Jacket</h1>
-        <p className={styles.description}>
-          great outerwear jackets for Spring/Autumn/Winter, suitable for many
-          occasions, such as working ...
-        </p>
-      </div>
-      <div className={styles.footer}>
-        <a className={styles.detailed} href="#">
-          Подробнее
-        </a>
-        <button className={styles.button}>В корзину</button>
-      </div>
-    </article>
+    <li className={styles.item}>
+      <article className={styles.card}>
+        <div className={styles.imageBox}>
+          <img className={styles.image} src={elem.image} alt="" />
+        </div>
+        <div className={styles.body}>
+          <h1 className={styles.price}>{elem.price} ₽</h1>
+          <h1 className={styles.title}>{elem.title}</h1>
+          <p className={styles.description}>{elem.description}</p>
+        </div>
+        <div className={styles.footer}>
+          <Link to={"/details"} className={styles.detailed}>
+            Подробнее
+          </Link>
+          <button className={styles.button}>В корзину</button>
+        </div>
+      </article>
+    </li>
   );
 }
 
