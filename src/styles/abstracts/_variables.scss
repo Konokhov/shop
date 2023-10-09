@@ -9,14 +9,16 @@ $font-size-middle: 18px;
 $font-size-medium: 20px;
 $line-height-tiny: 24px;
 
-$font-path: '../assets/fonts/roboto';
+$font-path: "../assets/fonts/roboto";
 
-$font-family-custom: 'Roboto';
-$font-family-default: 'Arial', 'Helvetica', sans-serif;
+$font-family-custom: "Roboto";
+$font-family-default: "Arial", "Helvetica", sans-serif;
 $font-family: $font-family-custom, $font-family-default;
 
-$screen-desktop: '(min-width: 1440px)';
-$screen-tablet: '(min-width: 768px)';
+$screen-desktop: "(min-width: 1440px)";
+$screen-tablet: "(min-width: 768px)";
 
 $border-radius-middle: 5px;
 $border-radius-medium: 8px;
+
+$z-index-header: 100;

@@ -1,3 +1,5 @@
+@import "@/abstracts/variables";
+
 .menuIcon {
   display: flex;
   justify-content: center;
@@ -10,6 +12,7 @@
   background-color: transparent;
   cursor: pointer;
   appearance: none;
+  z-index: $z-index-header;
 
   @media (min-width: 768px) {
     display: none;
