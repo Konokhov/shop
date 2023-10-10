@@ -20,7 +20,7 @@ function Item({ elem }: ItemProps) {
           <p className={styles.description}>{elem.description}</p>
         </div>
         <div className={styles.footer}>
-          <Link to={"/details"} className={styles.detailed}>
+          <Link to={`/details/${elem.id}`} className={styles.detailed}>
             Подробнее
           </Link>
           <button className={styles.button}>В корзину</button>

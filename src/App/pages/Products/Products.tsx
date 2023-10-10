@@ -13,12 +13,6 @@ function Products() {
     dispatch(fetchProducts());
   }, []);
 
-  useEffect(() => {
-    console.log(data);
-    console.log(isLoading);
-    console.log(error);
-  }, [data, isLoading, error]);
-
   return (
     <PageLayout>
       <ContainerLayout>
