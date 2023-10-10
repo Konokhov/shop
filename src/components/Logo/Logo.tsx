@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Logo() {
   return (
     <Link to={"/"} className={styles.logo}>
-      Shop
+      Магазин
     </Link>
   );
 }
