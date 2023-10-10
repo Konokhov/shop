@@ -15,6 +15,7 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (min-width: 768px) {
     width: 50%;
@@ -48,11 +49,29 @@
   font-size: 20px;
 }
 
+.price {
+  font-size: 28px;
+}
+
+.title {
+  font-size: 24px;
+}
+
 .description {
   margin: 0;
 }
 
-.info {
+.rating {
   display: flex;
   gap: 20px;
+}
+
+.rate {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  width: 16px;
 }
