@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import PageLayout from "components/PageLayout";
 import List from "./components/List";
+import ContainerLayout from "components/ContainerLayout";
 import { fetchProducts } from "../../../store/productsApiSlice";
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";
 
@@ -20,9 +21,11 @@ function Products() {
 
   return (
     <PageLayout>
-      {error && <h1>{error}</h1>}
-      {isLoading && <h1>Загрузка...</h1>}
-      {!isLoading && <List data={data} />}
+      <ContainerLayout>
+        {error && <h1>{error}</h1>}
+        {isLoading && <h1>Загрузка...</h1>}
+        {!isLoading && <List data={data} />}
+      </ContainerLayout>
     </PageLayout>
   );
 }
