@@ -1,0 +1,58 @@
+@import "@/abstracts/variables";
+
+.card {
+  background-color: #fff;
+  border-radius: $border-radius-medium;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    display: flex;
+    font-size: 18px;
+  }
+}
+
+.left {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.box {
+  max-width: 300px;
+  padding: 10px;
+}
+
+.image {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.right {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    background-color: #26272a;
+    color: #fff;
+  }
+}
+
+.category {
+  font-size: 20px;
+}
+
+.description {
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  gap: 20px;
+}
