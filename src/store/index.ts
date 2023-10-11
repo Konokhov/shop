@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import productsApi from "./productsApiSlice";
 import details from "./details";
 import category from "./category";
+import products from "./products";
 
 const store = configureStore({
   reducer: {
     details,
     category,
-    products: productsApi,
+    products,
   },
 });
 
