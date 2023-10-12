@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import PageLayout from "components/PageLayout";
 import DetailsCard from "./components/DetailsCard";
 import ContainerLayout from "components/ContainerLayout";
+import Loader from "components/Loader";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";
 import { fetchDetails } from "../../../store/details";
@@ -17,7 +18,10 @@ function Details() {
 
   return (
     <PageLayout>
-      <ContainerLayout>{data && <DetailsCard data={data} />}</ContainerLayout>
+      <ContainerLayout>
+        {isLoading && <Loader />}
+        {data && <DetailsCard data={data} />}
+      </ContainerLayout>
     </PageLayout>
   );
 }
