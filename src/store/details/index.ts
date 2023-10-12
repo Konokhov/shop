@@ -39,6 +39,7 @@ const detailsStore = createSlice({
       .addCase(fetchDetails.pending, (state) => {
         state.isLoading = true;
         state.error = null;
+        state.data = null;
       })
       .addCase(fetchDetails.fulfilled, (state, action) => {
         state.isLoading = false;
