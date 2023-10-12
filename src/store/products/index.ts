@@ -7,12 +7,21 @@ export type ProductsData = {
   error: null | string;
 };
 
+export type Parameters = {
+  category: string;
+  sort: string;
+};
+
 export const fetchProducts = createAsyncThunk<
   Product[],
-  undefined,
+  Parameters,
   { rejectValue: string }
->("data/fetchProducts", async (_, { rejectWithValue }) => {
-  const response = await fetch("https://fakestoreapi.com/products");
+>("data/fetchProducts", async (parameters, { rejectWithValue }) => {
+  const { category, sort } = parameters;
+
+  const response = await fetch(
+    `https://fakestoreapi.com/products/${category}?sort=${sort}`
+  );
 
   if (!response.ok) {
     return rejectWithValue("Server Error!");
