@@ -5,8 +5,13 @@ import Navbar from "components/Navbar";
 import BasketIcon from "components/BasketIcon";
 import MenuIcon from "components/MenuIcon";
 import styles from "./Header.module.scss";
+import { CartProducts } from "../../types/cardProducts";
 
-function Header() {
+type HeaderProps = {
+  data: CartProducts | null;
+};
+
+function Header({ data }: HeaderProps) {
   const [isToggle, setIsToggle] = useState<boolean>(false);
 
   const isChangeFunc = () => {
@@ -22,7 +27,7 @@ function Header() {
             <Navbar isToggle={isToggle} />
           </div>
           <div className={styles.right}>
-            <BasketIcon />
+            <BasketIcon data={data} />
             <MenuIcon isToggle={isToggle} isChangeFunc={isChangeFunc} />
           </div>
         </div>
