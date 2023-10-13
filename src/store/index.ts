@@ -2,12 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import details from "./details";
 import category from "./category";
 import products from "./products";
+import basket from "./basket";
 
 const store = configureStore({
   reducer: {
     details,
     category,
     products,
+    basket,
   },
 });
 
