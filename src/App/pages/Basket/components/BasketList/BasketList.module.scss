@@ -1,0 +1,11 @@
+@import "@/abstracts/variables";
+
+.basketList {
+  background-color: #fff;
+  border-radius: $border-radius-medium;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
