@@ -23,7 +23,6 @@ function Item({ elem }: ItemProps) {
           <Link to={`/details/${elem.id}`} className={styles.detailed}>
             Подробнее
           </Link>
-          <button className={styles.button}>В корзину</button>
         </div>
       </article>
     </li>
