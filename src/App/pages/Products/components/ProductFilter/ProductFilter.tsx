@@ -6,7 +6,11 @@ type ProductFilterProps = {
 };
 
 function ProductFilter({ children }: ProductFilterProps) {
-  return <div className={styles.filters}>{children}</div>;
+  return (
+    <div className={styles.productFilter}>
+      <div className={styles.filters}>{children}</div>
+    </div>
+  );
 }
 
 export default ProductFilter;

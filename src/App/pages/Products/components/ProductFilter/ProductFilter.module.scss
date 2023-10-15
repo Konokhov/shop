@@ -1,3 +1,12 @@
+.productFilter {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .filters {
   width: 100%;
   display: flex;
@@ -5,7 +14,7 @@
   gap: 10px;
 
   @media (min-width: 768px) {
+    max-width: 600px;
     flex-direction: row;
-    justify-content: end;
   }
 }
