@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://konokhov.github.io/shop",
   "scripts": {
     "dev": "NODE_ENV=development webpack serve",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "predeploy": "npm build",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "last 2 versions"
@@ -26,6 +29,7 @@
     "babel-plugin-react-css-modules": "^5.2.6",
     "css-loader": "^6.8.1",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^9.0.0",
