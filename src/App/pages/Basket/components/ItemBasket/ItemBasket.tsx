@@ -11,6 +11,7 @@ type ItemBasketProps = {
 
 function ItemBasket({ basketData, data }: ItemBasketProps) {
   const total = data.products.find((i) => i.productId === basketData.id);
+  console.log(basketData);
 
   return (
     <li className={styles.itemBasket}>
@@ -23,7 +24,8 @@ function ItemBasket({ basketData, data }: ItemBasketProps) {
         </Link>
       </div>
       <div className={styles.right}>
-        <div className={styles.total}>{`${total?.quantity}шт`}</div>
+        <div className={styles.price}>{basketData.price} $</div>
+        <div className={styles.total}>{total?.quantity} шт</div>
       </div>
     </li>
   );

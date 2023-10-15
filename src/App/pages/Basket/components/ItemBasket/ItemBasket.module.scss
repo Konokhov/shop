@@ -1,7 +1,12 @@
+@import "@/abstracts/variables.scss";
+
 .itemBasket {
   display: flex;
   justify-content: space-between;
   gap: 15px;
+  padding: 10px 20px;
+  border-radius: $border-radius-medium;
+  background-color: #fff;
 
   @media (min-width: 768px) {
     font-size: 18px;
@@ -15,23 +20,36 @@
 }
 
 .imageBlock {
-  max-width: 60px;
+  width: 60px;
   height: 60px;
 
   @media (min-width: 768px) {
-    max-width: 100px;
+    width: 100px;
   }
 }
 
 .image {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 .title {
+  color: $malibu;
 }
+
+.price {
+  min-width: 60px;
+  text-align: right;
+}
+
+.total {
+  min-width: 60px;
+  text-align: right;
+}
+
 .right {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
