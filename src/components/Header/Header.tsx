@@ -18,13 +18,17 @@ function Header({ data }: HeaderProps) {
     setIsToggle(!isToggle);
   };
 
+  const isCloseToggle = () => {
+    setIsToggle(false);
+  }
+
   return (
     <header className={styles.header}>
       <ContainerLayout>
         <div className={styles.body}>
           <div className={styles.left}>
             <Logo />
-            <Navbar isToggle={isToggle} />
+            <Navbar isToggle={isToggle} isCloseToggle={isCloseToggle} />
           </div>
           <div className={styles.right}>
             <BasketIcon data={data} />
